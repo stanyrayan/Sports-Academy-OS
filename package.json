@@ -1,0 +1,47 @@
+{
+  "name": "cricacademy-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Multi-tenant cricket academy management and verified selection pipeline built with the MERN stack.",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && concurrently \"npm run dev:server\" \"npm run preview\"",
+    "dev:client": "npm run build && npm run preview",
+    "dev:server": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "build": "vite build client",
+    "preview": "vite preview client --host 127.0.0.1",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.468.0",
+    "mongoose": "^8.9.2",
+    "multer": "^2.0.0",
+    "nodemailer": "^8.0.10",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^3.0.0",
+    "vite": "^6.0.6"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "nodemon": "^3.1.9"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "server/uploads/*",
+      "client/*"
+    ]
+  }
+}

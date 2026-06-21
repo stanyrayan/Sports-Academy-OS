@@ -73,6 +73,10 @@ app.use((error, req, res, next) => {
   res.status(500).json({ message: "Something went wrong on the server." });
 });
 
-app.listen(port, () => {
-  console.log(`SportsAcademy-OS Server running on port ${port}`);
-});
+if (process.env.NODE_ENV !== 'production' || process.env.RENDER || process.env.RAILWAY_ENVIRONMENT) {
+  app.listen(port, () => {
+    console.log(`SportsAcademy-OS Server running on port ${port}`);
+  });
+}
+
+export default app;

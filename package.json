@@ -9,7 +9,7 @@
     "dev:client": "npm run build && npm run preview",
     "dev:server": "nodemon server/index.js",
     "start": "node server/index.js",
-    "build": "vite build client && node build.js",
+    "build": "vite build client",
     "preview": "vite preview client --host 127.0.0.1",
     "lint": "eslint ."
   },

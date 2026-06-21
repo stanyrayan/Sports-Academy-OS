@@ -6,13 +6,17 @@
       "use": "@vercel/static-build"
     },
     {
-      "src": "api/[...slug].js",
+      "src": "api/index.js",
       "use": "@vercel/node"
     }
   ],
   "rewrites": [
     {
-      "source": "/((?!api/).*)",
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ]

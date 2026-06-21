@@ -9,7 +9,7 @@
     "dev:client": "vite",
     "dev:server": "nodemon server/index.js",
     "start": "node server/index.js",
-    "build": "vite build && echo 'PWD IS:' && pwd && echo 'LS LA:' && ls -la && echo 'LS LA PUBLIC:' && ls -la public",
+    "build": "vite build && ls -la vercel-dist",
     "preview": "vite preview client --host 127.0.0.1",
     "lint": "eslint ."
   },

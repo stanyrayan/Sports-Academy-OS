@@ -5,7 +5,7 @@ export default defineConfig({
   root: '.',
   plugins: [react()],
   build: {
-    outDir: 'public',
+    outDir: 'vercel-dist',
     emptyOutDir: true
   },
   publicDir: false

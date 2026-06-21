@@ -5,11 +5,11 @@
   "description": "Multi-tenant cricket academy management and verified selection pipeline built with the MERN stack.",
   "type": "module",
   "scripts": {
-    "dev": "npm run build && concurrently \"npm run dev:server\" \"npm run preview\"",
-    "dev:client": "npm run build && npm run preview",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "vite",
     "dev:server": "nodemon server/index.js",
     "start": "node server/index.js",
-    "build": "vite build client",
+    "build": "vite build client --outDir ../public --emptyOutDir",
     "preview": "vite preview client --host 127.0.0.1",
     "lint": "eslint ."
   },
